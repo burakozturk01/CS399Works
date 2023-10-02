@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Joke>
+@{
+    ViewData["Title"] = "Jokes";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Worst Dad Jokes</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Joke" asp-action="Write" class="btn btn-primary">
+                <i class="bi bi-plus-square"></i> &nbsp; Write a joke
+            </a>
+        </div>
+    </div>
+    <br/>
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Punchline</th>
+                <th>Author</th>
+                <th>Last Updated</th>
+                <th>Modify</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model.OrderBy(obj => obj.DisplayOrder))
+            {
+                <tr>
+                    <td width="5%" align="right">
+                        @obj.DisplayOrder
+                    </td>
+                    <td width="25%">
+                        @obj.Title
+                    </td>
+                    <td width="23%">
+                        <div class="pl-container">
+                            @obj.Description
+                        </div>
+                    </td>
+                    <td width="20%">
+                        @obj.Author
+                    </td>
+                    <td width="15%">
+                        @obj.CreatedDateTime
+                    </td>
+                    <td width="12%" align="center">
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-primary mb-1" asp-controller="Joke" asp-action="Edit" asp-route-id="@obj.Id">
+                                <i class="bi bi-pencil-square"></i>Edit
+                            </a>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-primary btn-danger" asp-controller="Joke" asp-action="Delete" asp-route-id="@obj.Id">
+                                <i class="bi bi-trash"></i>Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

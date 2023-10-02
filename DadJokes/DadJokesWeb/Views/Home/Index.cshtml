@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to DadJokes!</h1>
+    <p>Where bad jokes are celebrated and laughter is mandatory!</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Share Your Dad Jokes</h3>
+                    <p class="card-text">Are you a master of dad jokes? Do you have a collection of cringe-worthy puns? DadJokes is the perfect place to showcase your comedic talents! Here's how:</p>
+                    <ol>
+                        <li>Create: Unleash your wit and post your best dad jokes for the world to enjoy.</li>
+                        <li>Read: Explore a treasure trove of dad jokes submitted by fellow jokesters.</li>
+                        <li>Update: Polish your jokes, add punchlines, or refine the delivery to maximize the laughter.</li>
+                        <li>Delete: If a joke doesn't quite hit the mark, don't worry! Delete it and try again.</li>
+                    </ol>
+                    <p class="card-text">Get ready to bring joy and laughter to the world. Join DadJokes today!</p>
+                    <a asp-controller="Joke" asp-action="Index" class="btn btn-primary">Start Sharing Jokes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="text-center mt-5">
+    <p>© 2023 DadJokes. All rights reserved.</p>
+    <p>Powered by ASP.NET Core</p>
+</footer>

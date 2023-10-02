@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\bilkent\4thYear\SummerTraining\Works\DadJokes\DadJokesWeb\obj\Release\net6.0\win-x86\PubTmp\Out\" />
+  <dbfullsql path="D:\bilkent\4thYear\SummerTraining\Works\DadJokes\DadJokesWeb\obj\Release\net6.0\win-x86\PubTmp\EFSQLScripts\DadJokesWeb.Data.ApplicationDbContext.sql" />
+</sitemanifest>

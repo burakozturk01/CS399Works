@@ -1,0 +1,106 @@
+﻿@model IEnumerable<ASPDemo.Models.Person>
+
+@{
+    ViewBag.Title = "CSR";
+}
+<h2>Client Side Rendering</h2>
+
+<p>
+    @Html.ActionLink("Create New Person", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAlive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+    </tr>
+</table>
+
+@section scripts {
+    <script>
+        var people = @Html.Raw(
+                         Newtonsoft.Json.JsonConvert.SerializeObject(
+                             Model,
+                             Newtonsoft.Json.Formatting.Indented
+                         )
+                     );
+
+        function td(data1, data2 = "", data3 = "") {
+            return "<td>" + data1 + data2 + data3 + "</td>";
+        }
+
+        function a(type, id) {
+            switch (type) {
+                case "edit":
+                    return '<a href=\"/People/Edit/' + id + '\">Edit</a> | ';
+                case "details":
+                    return '<a href=\"/People/Details/' + id + '\">Details</a> | ';
+                case "delete":
+                    return '<a href=\"/People/Delete/' + id + '\">Delete</a> | ';
+                default:
+                    return;
+            }
+
+        }
+
+        $(document).ready(function () {
+            people.forEach(function (person) {
+                $('.table').append(
+                    "<tr>"
+                        + td(person.FirstName)
+                        + td(person.LastName)
+                        + td(person.IsAlive ? 'Yes' : 'No')
+                        + td(person.Age)
+
+                        + td(
+                            a("edit", person.Id),
+                            a("details", person.Id),
+                            a("delete", person.Id)
+                          )
+                    + "</tr>"
+                );
+            });
+        });
+    </script>
+
+
+
+    <!--<script>
+        var people = @Html.Raw(
+            Newtonsoft.Json.JsonConvert.SerializeObject(
+                Model,
+                Newtonsoft.Json.Formatting.Indented
+            )
+        );
+
+        $(document).ready(function () {
+            people.forEach(function (person) {
+                $('.table').append(
+                    "<tr>"
+                    + "<td>" + person.FirstName + "</td>"
+                    + "<td>" + person.LastName + "</td>"
+                    + "<td>" + (person.IsAlive ? 'Yes' : 'No') + "</td>"
+                    + "<td>" + person.Age.toString() + "</td>"
+
+                    + "<td>"
+                    + '@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) | '
+                    + '@Html.ActionLink("Details", "Details", new {}) | '
+                    + '@Html.ActionLink("Delete", "Delete", new {})'
+                    + "</td>"
+
+                    + "</tr>"
+                );
+            });
+        });
+    </script>-->
+}

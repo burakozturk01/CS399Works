@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JQuery CrashCourse</title>
+        <meta name="im learnin' jquery" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="/jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>JQuery Crash CrashCourse</h1>
+        </header>
+        
+        <div id="container">
+            <h2>Mouse Events</h2>
+
+            <h3>Collatz Conjecture Game</h3>
+            <span>Number:</span>
+            <span id="conjnum"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Count:</span>
+            <span id="cnt">0</span>
+            <br>
+            <button id="btn1" style="visibility: visible;">Butt 1</button>
+            <button id="btn2" style="visibility: hidden;">Butt 2</button>
+
+            <h3 id="hover">Hover</h3>
+            <script>
+                for (let i = 10; i >= 1; --i)
+                    $('#hover').after(`<span id="hoverspan" style="padding: 10px;">Hey ${i} </span>`);
+            </script>
+
+            
+        </div>
+        
+        <script>
+            //Collatz
+            $('span#conjnum').text(Math.floor(Math.random()*100 + 1));
+            $('button#btn1, button#btn2').click(function (e) {
+                var t = parseInt( $('span#conjnum').text() );
+                t = t % 2 ? 3*t + 1 : t / 2;
+                $('span#conjnum').text(t);
+
+                if (t === 1) {
+                    $('button#btn2').hide();
+                    $('button#btn1').replaceWith('<span style="font-weight: bold;">Congrats</span>');
+                }
+                
+                $('span#cnt').text(parseInt($('span#cnt').text())+1);
+
+                $(this.id == 'btn1' ? '#btn2' : '#btn1').css('visibility', 'visible');
+                $(this).css('visibility', 'hidden');
+            }); 
+
+            // Hover
+            $('span#hoverspan').css('user-select', 'none');
+            $('span#hoverspan').css('cursor', 'pointer');
+            $('span#hoverspan').hover(function() {
+                    $(this).css('color', 'red');
+                }, function() {
+                    $(this).css('color', 'black');
+                });
+            $('span#hoverspan').dblclick(function() {
+                var curr = $(this).css('font-size');
+                $(this).css('font-size', String(50 - parseInt(curr.slice(0,2)))+"px");
+            });
+            $(document).keypress(function (e) {
+                if (e.which === 45) {
+                    var n = $('*').length;
+                    $('*').eq(Math.floor(Math.random()*n)).hide();
+                }
+            });
+        </script>
+    </body>
+</html>

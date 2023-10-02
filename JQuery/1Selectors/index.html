@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JQuery CrashCourse</title>
+        <meta name="im learnin' jquery" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="/jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>JQuery Crash CrashCourse</h1>
+        </header>
+        
+        <div id="container">
+            <h1 id="heading1">Heading 1</h1>
+            <p id="para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit fermentum ultricies, <span>vehicula tortor urna</span>. Aenean taciti proin augue lacinia suspendisse torquent lectus himenaeos vestibulum, consequat ad diam fames tincidunt tempor gravida eget fermentum, imperdiet nunc elementum hac convallis erat quisque sodales. Vivamus laoreet pretium ornare ullamcorper ligula penatibus pharetra, suspendisse sapien phasellus cum per sed commodo, bibendum quis at nunc odio faucibus.</p>
+            
+            <h1 id="heading2">Heading 2</h1>
+            <p id="para2">Cras augue mauris eu varius fusce pharetra etiam semper, aptent ridiculus tortor facilisis donec penatibus elementum at, scelerisque vehicula class placerat per ligula phasellus. Odio cum eu tincidunt leo vulputate quis dis pretium, litora aliquam sem id cursus netus egestas ultrices, rutrum lectus venenatis phasellus suspendisse volutpat proin. <span>Nibh litora ultricies quis</span> felis aenean rutrum vulputate accumsan ligula augue, platea sollicitudin maecenas sagittis ullamcorper vivamus suscipit vel lacinia duis ultrices, rhoncus sociis penatibus suspendisse iaculis dignissim venenatis dis dui.</p>
+            
+            <div id="ulist">
+                <h2>Things</h2>
+                <ul>
+                    <li>Thing   1</li>
+                    <li>Thing   2</li>
+                    <li>Thing   1</li>
+                    <li>Thing  12</li>
+                    <li>Thing  21</li>
+                    <li>Thing  22</li>
+                    <li>Thing 111</li>
+                </ul>
+            </div>
+            
+            <input type="button" value="Butt 1">
+            <input type="submit" value="Submit">
+            <input type="text">
+
+            <a href="https://www.google.com/">Google</a>
+            <a href="https://www.yahoo.com/">Yahoo</a>
+        </div>
+        
+        <script>
+            $('span').css('text-decoration', 'underline');
+            $('span').css('cursor', 'pointer');
+
+            $('span').hover(function() {
+                $(this).css("color", "red");
+            },
+            function() {
+                $(this).css("color", "black");
+            });
+
+            $('div#ulist ul li:even').css('background-color', 'lightgray');
+            $('div#ulist ul li:odd').css('background-color', '#eeeeee');
+            $('div#ulist ul li:first').css('color', 'red');
+            $('div#ulist ul li:last').css('color', '#345681');
+            $('div#ulist ul li:nth-child(3n+1)').css('text-decoration', 'underline'); // every (3n+1)th
+            
+            $(':button').css('background-color', '#4CAF50');
+
+            $('input[value=Submit]').hover( function () {
+                    $(this).val('Heyy');
+                    
+                }, function () {
+                    $(this).val('Submit');
+                }
+            );
+            var randStr = Math.random().toString(36).substring(2, 10) + Math.random().toString(36).substring(2, 10);
+            $('input:text').val(randStr);
+
+            $('[href]').css('color', 'orange');
+            $('a[href="https://www.google.com/"]').css('background-color', 'blue');
+            
+            //$('*').hide(); Select-all wildcard
+
+            
+        </script>
+    </body>
+</html>

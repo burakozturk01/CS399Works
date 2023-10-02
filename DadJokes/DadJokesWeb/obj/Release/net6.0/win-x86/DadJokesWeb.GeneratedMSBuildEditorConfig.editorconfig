@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DadJokesWeb
+build_property.RootNamespace = DadJokesWeb
+build_property.ProjectDir = D:\bilkent\4thYear\SummerTraining\Works\DadJokes\DadJokesWeb\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\bilkent\4thYear\SummerTraining\Works\DadJokes\DadJokesWeb
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Joke/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Joke/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Joke/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Joke/Write.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZVxXcml0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/bilkent/4thYear/SummerTraining/Works/DadJokes/DadJokesWeb/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4mdz9c3h0v

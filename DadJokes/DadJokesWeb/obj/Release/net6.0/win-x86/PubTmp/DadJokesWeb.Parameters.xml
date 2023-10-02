@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="DadJokesWeb" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\bilkent\\4thYear\\SummerTraining\\Works\\DadJokes\\DadJokesWeb\\obj\\Release\\net6\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="DadJokesWeb.Data.ApplicationDbContext" description="" value="Server=tcp:dotnet-server.database.windows.net,1433;Initial Catalog=dotnet_db;Persist Security Info=False;User ID=burakozturk001;Password=01*isarem*52;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\bilkent\\4thYear\\SummerTraining\\Works\\DadJokes\\DadJokesWeb\\obj\\Release\\net6\.0\\win-x86\\PubTmp\\EFSQLScripts\\DadJokesWeb\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>
